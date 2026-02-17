@@ -28,7 +28,7 @@ int partition(int *array, int low, int high, size_t size)
 		{
 		i++;
 		/*only swap if i and j are different to avoid unnecessary swaps and prints*/
-		if (i != j || array[i] != array[j])
+		if (i != j && array[i] != array[j])
 		{
 		temp = array[i];
 		array[i] = array[j];
