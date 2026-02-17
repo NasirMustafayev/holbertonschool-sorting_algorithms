@@ -12,7 +12,10 @@
  */
 int partition(int *array, int low, int high, size_t size)
 {
-	/* pivot is the last element of the partition according to the Lomuto partition scheme */
+	/**
+	 * pivot is the last element of the partition
+	 *  according to the Lomuto partition scheme
+	 **/
 	int pivot, i, j, temp;
 
 	pivot = array[high];
@@ -25,12 +28,12 @@ int partition(int *array, int low, int high, size_t size)
 		{
 		i++;
 		/*only swap if i and j are different to avoid unnecessary swaps and prints*/
-		if (i != j)
+		if (i != j || array[i] != array[j])
 		{
 		temp = array[i];
 		array[i] = array[j];
 		array[j] = temp;
-		
+
 		print_array(array, size);
 		}
 
